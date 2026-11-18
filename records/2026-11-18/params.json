@@ -1,0 +1,22 @@
+{
+  "model_id_hex": "6d6572637572792d696e74656c2d763100000000000000000000000000000000",
+  "model_version": 1,
+  "decision_day": 20775,
+  "data_as_of": 1794960000,
+  "mode": "shadow",
+  "layer_targets": {
+    "reserve_bps": 2000,
+    "income_bps": 3500,
+    "systematic_bps": 2000,
+    "gold_bps": 1000,
+    "bitcoin_bps": 1000,
+    "frontier_bps": 500
+  },
+  "carry_targets": {
+    "btc_bps": 0,
+    "eth_bps": 0,
+    "sol_bps": 1029
+  },
+  "inputs_hash": "d095983a2c13829dab0bef4591bd925261755e1bd9fe3455bf08a993b7b1b888",
+  "rationale_hash": "b07755bec48fbc5e1b72483796b7d0d18d26a1791b856bb4b41ff1fb69ee81b9"
+}

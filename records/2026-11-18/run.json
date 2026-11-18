@@ -1,0 +1,104 @@
+{
+  "decision_date": "2026-11-18",
+  "out": "/home/gabrielzanko/.local/share/mercury-intelligence/2026-11-18",
+  "params": {
+    "model_id_hex": "6d6572637572792d696e74656c2d763100000000000000000000000000000000",
+    "model_version": 1,
+    "decision_day": 20775,
+    "data_as_of": 1794960000,
+    "mode": "shadow",
+    "layer_targets": {
+      "reserve_bps": 2000,
+      "income_bps": 3500,
+      "systematic_bps": 2000,
+      "gold_bps": 1000,
+      "bitcoin_bps": 1000,
+      "frontier_bps": 500
+    },
+    "carry_targets": {
+      "btc_bps": 0,
+      "eth_bps": 0,
+      "sol_bps": 1029
+    },
+    "inputs_hash": "d095983a2c13829dab0bef4591bd925261755e1bd9fe3455bf08a993b7b1b888",
+    "rationale_hash": "b07755bec48fbc5e1b72483796b7d0d18d26a1791b856bb4b41ff1fb69ee81b9"
+  },
+  "bands_ok": true,
+  "paper": [
+    {
+      "day": "2026-11-13",
+      "status": "no_decision",
+      "ret": -0.004431555759998245,
+      "nav": 0.9871950630491874,
+      "tbill_nav": 1.0005362793833197,
+      "drawdown_bps": 153,
+      "sleeve_nav": 1.0003261630489566,
+      "sleeve_drawdown_bps": 0
+    },
+    {
+      "day": "2026-11-14",
+      "status": "no_decision",
+      "ret": -0.007985246758371528,
+      "nav": 0.9793120668720935,
+      "tbill_nav": 1.0006440083580588,
+      "drawdown_bps": 231,
+      "sleeve_nav": 1.0004334088343896,
+      "sleeve_drawdown_bps": 0
+    },
+    {
+      "day": "2026-11-15",
+      "status": "no_decision",
+      "ret": 0.004189282045307094,
+      "nav": 0.9834146813305934,
+      "tbill_nav": 1.0007517489321094,
+      "drawdown_bps": 190,
+      "sleeve_nav": 1.0003962448263841,
+      "sleeve_drawdown_bps": 0
+    },
+    {
+      "day": "2026-11-16",
+      "status": "no_decision",
+      "ret": -0.0015705385160038627,
+      "nav": 0.9818701906963601,
+      "tbill_nav": 1.0008603236424045,
+      "drawdown_bps": 206,
+      "sleeve_nav": 1.0004769674210294,
+      "sleeve_drawdown_bps": 0
+    },
+    {
+      "day": "2026-11-17",
+      "status": "no_decision",
+      "ret": -5.233018857127274e-05,
+      "nav": 0.9818188092441283,
+      "tbill_nav": 1.0009686359240042,
+      "drawdown_bps": 206,
+      "sleeve_nav": 1.0004452349470667,
+      "sleeve_drawdown_bps": 0
+    }
+  ],
+  "snapshot": {
+    "snapshot_id": 20774,
+    "metric_data_mask": 47,
+    "nav_per_share": 981819,
+    "benchmark_return_bps": 10,
+    "high_watermark": 1002485,
+    "current_drawdown_bps": 0,
+    "liquidity_coverage_bps": 0,
+    "turnover_used_bps": 0,
+    "volatility_bps": 0,
+    "capacity_utilization_bps": 0,
+    "return_source_count": 0
+  },
+  "snapshot_result": {
+    "status": "recorded",
+    "signature": "58E88kHd4nntbs5k7q3h3jxvEbKq2gZCNqYQot9ivER6ABQXjPbNJqfGdz7dAbinB6bg9Sagxi2P8Tc4qpf8jRhV",
+    "snapshot": "9keZR25Sn3o7XnziCoGk8UuhijLicH255hr2bVb4wyPD",
+    "provenance": "Ek3qfQqRgjVEtCiYndgoFdcRkdAhgKPD3zB2PCZmR2Gu"
+  },
+  "publish_result": {
+    "status": "published",
+    "signature": "2FzoKZqZknJmgkheSQ1ithXQXg5C6sSG2AwBbNqz5JKDereVUpLCLwm4bEVKhXqqkYr54jD58C52Y4DitzN9p6f7",
+    "decision": "4si4tHKqT9zh97iDa5KMuV66gBiuFrcAMzR6CL8CR6j6"
+  },
+  "status": "published"
+}
