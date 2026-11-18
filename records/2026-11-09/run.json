@@ -1,0 +1,35 @@
+{
+  "decision_date": "2026-11-09",
+  "out": "/home/gabrielzanko/.local/share/mercury-intelligence/2026-11-09",
+  "params": {
+    "model_id_hex": "6d6572637572792d696e74656c2d763100000000000000000000000000000000",
+    "model_version": 1,
+    "decision_day": 20766,
+    "data_as_of": 1794182400,
+    "mode": "shadow",
+    "layer_targets": {
+      "reserve_bps": 2000,
+      "income_bps": 3500,
+      "systematic_bps": 2000,
+      "gold_bps": 1000,
+      "bitcoin_bps": 1000,
+      "frontier_bps": 500
+    },
+    "carry_targets": {
+      "btc_bps": 0,
+      "eth_bps": 0,
+      "sol_bps": 1834
+    },
+    "inputs_hash": "3b0da44962babd23f0c6831b8578cf1ff039dc40b0334f7ef665b9e8cc4fd027",
+    "rationale_hash": "c868de4f119858cd76f5a3b517b3d8cf36b6a4cf675f5f67600b7cecc335df1d"
+  },
+  "bands_ok": true,
+  "paper": [],
+  "snapshot": null,
+  "publish_result": {
+    "status": "published",
+    "signature": "5e3NF1J8CLo9s1RFudDFZmBmJc9SeUMYZJrpq2nqF18j29s7UvBayKpN7L4fznrhKsi6EwfUMY5JrJNL1LBxsHoX",
+    "decision": "3dfQd5uHqDNwLLeup4hkeLqcZgfzoQNJ3hrZs6Ai5rzA"
+  },
+  "status": "published"
+}
