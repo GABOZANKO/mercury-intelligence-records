@@ -1,6 +1,6 @@
 {
   "decision_date": "2026-11-18",
-  "out": "/home/gabrielzanko/.local/share/mercury-intelligence/2026-11-18",
+  "out": "records/2026-11-18",
   "params": {
     "model_id_hex": "6d6572637572792d696e74656c2d763100000000000000000000000000000000",
     "model_version": 1,
