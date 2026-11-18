@@ -33,24 +33,41 @@ Each decision is stored in its own account (`AllocationDecisionState`, one per m
 
 ## Verify a day
 
-1. **Hash the files.**
+First hash the two files:
+
+```bash
+cd records/2026-11-09
+sha256sum rationale.json inputs.json
+```
+
+### The easy way: Solana Explorer
+
+The program's interface (its Anchor IDL) is published on chain, so Explorer can decode the decision account.
+
+1. Open the decision account on Explorer, on devnet. Its address is in `run.json` (`publish_result.decision`); the worked example below links it.
+2. Open the account's decoded view (**Anchor Data**). You can read the decision directly: `modelHash`, `authorizedSigner` (the model signer above), `decisionDay`, `dataAsOf`, `layerTargets`, `carryTargets`, `inputsHash`, `rationaleHash`.
+3. `inputsHash` and `rationaleHash` are 32-byte arrays, so Explorer lists them as 32 byte values rather than as a hex string. To compare, turn a file's sha256 into the same list:
 
    ```bash
-   cd records/2026-11-09
-   sha256sum rationale.json inputs.json
+   python3 -c 'import sys; print(list(bytes.fromhex(sys.argv[1])))' <sha256 of the file>
    ```
 
-2. **Open the decision account on Solana Explorer** (devnet) and check that it exists and is owned by the program above. Explorer shows the account's raw data but does not decode its fields, because the program does not publish its interface on chain.
+   The sha256 of `inputs.json` must give the `inputsHash` list, and the sha256 of `rationale.json` the `rationaleHash` list.
+4. The transaction in `run.json` (`publish_result.signature`) shows on Explorer when the decision was published and that the model signer signed it.
 
-3. **Read the two hashes from the account data.** In the account's raw bytes, `inputs_hash` is bytes 213–244 and `rationale_hash` is bytes 245–276 (32 bytes each, counting from 0). With the Solana CLI and Python:
+### The manual way: raw account bytes
 
-   ```bash
-   A=<decision account from run.json>
-   solana account "$A" --url devnet --output json-compact > account.json
-   python3 -c 'import base64,json; d=base64.b64decode(json.load(open("account.json"))["account"]["data"][0]); print("inputs_hash   ", d[213:245].hex()); print("rationale_hash", d[245:277].hex())'
-   ```
+Without Explorer, read the hashes from the account's raw data. `inputs_hash` is bytes 213–244 and `rationale_hash` is bytes 245–276 (32 bytes each, counting from 0). With the Solana CLI and Python:
 
-4. **Compare.** The sha256 of `inputs.json` must equal `inputs_hash`, and the sha256 of `rationale.json` must equal `rationale_hash`. The transaction in `run.json` (`publish_result.signature`) shows on Explorer when the decision was published and that the model signer signed it.
+```bash
+A=<decision account from run.json>
+solana account "$A" --url devnet --output json-compact > account.json
+python3 -c 'import base64,json; d=base64.b64decode(json.load(open("account.json"))["account"]["data"][0]); print("inputs_hash   ", d[213:245].hex()); print("rationale_hash", d[245:277].hex())'
+```
+
+The sha256 of `inputs.json` must equal `inputs_hash`, and the sha256 of `rationale.json` must equal `rationale_hash`.
+
+The account must be owned by the program above. The IDL Explorer uses is stored in the program's IDL account `4wm3SgqKAw5xtoPeoQLhgeyLXyRgeRryMzaX44Nccnf6`; the manual way does not depend on it.
 
 ## Worked example: 2026-11-09
 
@@ -63,6 +80,11 @@ The first decision of the model.
 |---|---|---|
 | `inputs.json` | `3b0da44962babd23f0c6831b8578cf1ff039dc40b0334f7ef665b9e8cc4fd027` | bytes 213–244: same |
 | `rationale.json` | `c868de4f119858cd76f5a3b517b3d8cf36b6a4cf675f5f67600b7cecc335df1d` | bytes 245–276: same |
+
+On Explorer the same hashes appear as byte lists:
+
+- `inputsHash`: `[59, 13, 164, 73, 98, 186, 189, 35, 240, 198, 131, 27, 133, 120, 207, 31, 240, 57, 220, 64, 176, 51, 79, 126, 246, 101, 185, 232, 204, 79, 208, 39]`
+- `rationaleHash`: `[200, 104, 222, 79, 17, 152, 88, 205, 118, 245, 163, 181, 23, 179, 216, 207, 54, 182, 164, 207, 103, 95, 95, 103, 96, 11, 124, 236, 195, 53, 223, 29]`
 
 The decision itself (from `params.json`, also in the account):
 
