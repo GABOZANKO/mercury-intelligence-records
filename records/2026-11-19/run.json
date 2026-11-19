@@ -1,0 +1,104 @@
+{
+  "decision_date": "2026-11-19",
+  "out": "records/2026-11-19",
+  "params": {
+    "model_id_hex": "6d6572637572792d696e74656c2d763100000000000000000000000000000000",
+    "model_version": 1,
+    "decision_day": 20776,
+    "data_as_of": 1795046400,
+    "mode": "shadow",
+    "layer_targets": {
+      "reserve_bps": 2000,
+      "income_bps": 3500,
+      "systematic_bps": 2000,
+      "gold_bps": 1000,
+      "bitcoin_bps": 1000,
+      "frontier_bps": 500
+    },
+    "carry_targets": {
+      "btc_bps": 0,
+      "eth_bps": 0,
+      "sol_bps": 1029
+    },
+    "inputs_hash": "945b597de5678ad7867b5284cc54cdc56bc1b487c19dbe780132dc38a4a82809",
+    "rationale_hash": "eb5b381f182dcab0a7228d0bc0c2223c5bd0286ed1e827812ff4c0696ddd7707"
+  },
+  "bands_ok": true,
+  "paper": [
+    {
+      "day": "2026-11-14",
+      "status": "no_decision",
+      "ret": -0.007985246758371528,
+      "nav": 0.9793120668720935,
+      "tbill_nav": 1.0006440083580588,
+      "drawdown_bps": 231,
+      "sleeve_nav": 1.0004334088343896,
+      "sleeve_drawdown_bps": 0
+    },
+    {
+      "day": "2026-11-15",
+      "status": "no_decision",
+      "ret": 0.004189282045307094,
+      "nav": 0.9834146813305934,
+      "tbill_nav": 1.0007517489321094,
+      "drawdown_bps": 190,
+      "sleeve_nav": 1.0003962448263841,
+      "sleeve_drawdown_bps": 0
+    },
+    {
+      "day": "2026-11-16",
+      "status": "no_decision",
+      "ret": -0.0015705385160038627,
+      "nav": 0.9818701906963601,
+      "tbill_nav": 1.0008603236424045,
+      "drawdown_bps": 206,
+      "sleeve_nav": 1.0004769674210294,
+      "sleeve_drawdown_bps": 0
+    },
+    {
+      "day": "2026-11-17",
+      "status": "no_decision",
+      "ret": -5.233018857127274e-05,
+      "nav": 0.9818188092441283,
+      "tbill_nav": 1.0009686359240042,
+      "drawdown_bps": 206,
+      "sleeve_nav": 1.0004452349470667,
+      "sleeve_drawdown_bps": 0
+    },
+    {
+      "day": "2026-11-18",
+      "status": "decision",
+      "ret": -0.005662624796589386,
+      "nav": 0.9762591377091446,
+      "tbill_nav": 1.0010772341650525,
+      "drawdown_bps": 262,
+      "sleeve_nav": 1.0001974365680797,
+      "sleeve_drawdown_bps": 3
+    }
+  ],
+  "snapshot": {
+    "snapshot_id": 20775,
+    "metric_data_mask": 47,
+    "nav_per_share": 976259,
+    "benchmark_return_bps": 11,
+    "high_watermark": 1002485,
+    "current_drawdown_bps": 3,
+    "liquidity_coverage_bps": 0,
+    "turnover_used_bps": 805,
+    "volatility_bps": 0,
+    "capacity_utilization_bps": 0,
+    "return_source_count": 0
+  },
+  "snapshot_result": {
+    "status": "recorded",
+    "signature": "2d2PgzJUMfAvcNwzpWx5zUSKyBv1LJT9Q8UKqhL5Cxdfw5ebriAPHrjzy1Cao3H4KxLkzPsSc8gWxWctodET44sK",
+    "snapshot": "ELUPWdYwp3QH6YjCqdNciTURZrGMDwA3iKNgY4tT2Ar7",
+    "provenance": "2W7CyEj7qYWiqiDaC7B8g4ixVx5vt9z3MXtcWgr6MDPH"
+  },
+  "publish_result": {
+    "status": "published",
+    "signature": "3uY3mbfcSeoKyJKpxATpXnYwSdjXUA7i93DuJn8kYXFEMLaj8s8DuKZ4Qi1z9TmZfPGgZ2AAzkoTuUjogKYnSn3c",
+    "decision": "3sHVrvQKqrBbi91zGWcQzg3oUpXUWeBQCDiqgvUeDP3e"
+  },
+  "status": "published"
+}
